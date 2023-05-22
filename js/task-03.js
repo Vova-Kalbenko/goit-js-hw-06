@@ -24,7 +24,7 @@ const makeGalleryCard = ({url, alt})=> `<li>
 <img src="${url}" alt="${alt}" width="420" height="250">
 </li>`
 
-const GalleryCardListEl = images.map((el)=>makeGalleryCard(el))
+const GalleryCardListEl = images.map((el)=>makeGalleryCard(el)).join("")
 
 
 

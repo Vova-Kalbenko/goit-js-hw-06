@@ -1,12 +1,14 @@
-const InputEL = document.querySelector('#validation-input')
+const inputEL = document.querySelector('#validation-input')
 
 const handleInputChange = (e) => {
-  if(e.target.value.length < InputEL.getAttribute('data-length')) {
-    InputEL.classList.add("invalid")
+  if(e.target.value.length === Number(inputEL.getAttribute('data-length'))) {
+    inputEL.classList.remove("invalid")
+    inputEL.classList.add("valid")
     return
   }
-   InputEL.classList.add("valid")
+    inputEL.classList.remove("valid")
+    inputEL.classList.add("invalid")
 }
 
 
-InputEL.addEventListener('blur', handleInputChange)
+inputEL.addEventListener('blur', handleInputChange)

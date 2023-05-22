@@ -10,7 +10,7 @@ const handleSubmitButton = (e) =>{
         window.alert(`all fields must be filled in.`)
         return
     }
-    
+    console.log(`{email: ${emailInputEl.value}, password: ${passwordInputEl.value}}`)
 }
 
 InputEl.addEventListener('submit', handleSubmitButton)
